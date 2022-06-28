@@ -53,3 +53,38 @@ In diesem Repository werden meine Aufträge und Kenntnisse vom Modul 300 dokumen
 **Handlungsnotwendige Kenntnisse:**
 1.Kennt die Bedeutung einer Dokumentation zur Sicherstellung und Nachvollziehbarkeit von Arbeitsergebnissen.
 2.Kennt die wichtigsten inhaltlichen und formalen Regeln, die bei der Dokumentation von Arbeitsergebnissen einzuhalten sind.
+
+# Zeitplan M300
+
+# Hauptteil
+Nun kommt der Hauptteil der des Repositorys
+
+## Spick LB01
+Hier ist noch die Zusammenfassung, welche ich zur Vorbereitung von LB01 zusammengetragen habe:
+
+## Aufbau der TBZ Infrastruktur
+In der untenstehenden Grafik wird erklärt, wie man sich die TBZ-Cloud verbindet:
+
+**Der Aufbau besteht aus den folgenden Komponenten:**
+-	Laptop des Lernenden
+-	Linux VM in der TBZ-Cloud (fungiert als Host)
+-	Guest als Vagrant (VM in VM)
+
+## Virtualisierung
+In der unteren Grafik wird das movement von Baremetal zu Virtualisierung 1.0 und schliesslich zu Virtualisierung 2.0 über die vergangen Jahre erklärt.
+
+**Vorteile von Cloudlösungen**
+- Tiefere Lizenzkosten
+- Weniger administrationsaufwand
+- Tiefere Produktionskosten
+- Hohe Flexibilität
+- Redundanz, Unabhängigkeit
+**Nachteile von Cloudlösungen**
+- Gemeinsamer Kernel von Betriebsystem wird verwendet (Die Sicherheit ist eingeschränkt)
+- Kompliziert in Sache Maintaining und Einrichtung
+- Geringe Komptabilität mit Windows
+- Wenig Fachpersonal für Wartung
+
+
+
+
