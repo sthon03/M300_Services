@@ -79,6 +79,7 @@ In der unteren Grafik wird das movement von Baremetal zu Virtualisierung 1.0 und
 - Tiefere Produktionskosten
 - Hohe Flexibilität
 - Redundanz, Unabhängigkeit
+
 **Nachteile von Cloudlösungen**
 - Gemeinsamer Kernel von Betriebsystem wird verwendet (Die Sicherheit ist eingeschränkt)
 - Kompliziert in Sache Maintaining und Einrichtung
