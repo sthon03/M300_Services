@@ -5,10 +5,14 @@ Mithilfe von Kubernetes WOrdpress als Container Deployen mit einer Mysql Datenba
 
 https://www.youtube.com/watch?v=-Hn7vFAr-9s
 
+https://youtu.be/c5c9yVtQGbU
+
 # Inhaltsverszeichnis
 
 ## Service-Aufbau 
-Text
+echo && cat /dev/urandom | env LC_CTYPE=C tr -dc [:alnum:] | head -c 15 | base64 && echo
+
+UWM4T3RXUWJlV0loSGRy
 
 ## Umsetzung
 Text
