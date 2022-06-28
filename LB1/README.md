@@ -63,9 +63,14 @@ Nun kommt der Hauptteil der des Repositorys
 
 ## Spick LB01
 Hier ist noch die Zusammenfassung, welche ich zur Vorbereitung von LB01 zusammengetragen habe:
+![image](https://user-images.githubusercontent.com/105722466/176195599-e002aaaf-6c2e-4ac3-a290-aeb3763f2e39.png)
+![image](https://user-images.githubusercontent.com/105722466/176195630-7954874a-be75-411d-b7a4-515203bd3958.png)
+
 
 ## Aufbau der TBZ Infrastruktur
 In der untenstehenden Grafik wird erklärt, wie man sich die TBZ-Cloud verbindet:
+
+![image](https://user-images.githubusercontent.com/105722466/176201601-212b8e47-7e0c-4142-8305-ead0cf29f2d1.png)
 
 **Der Aufbau besteht aus den folgenden Komponenten:**
 -	Laptop des Lernenden
