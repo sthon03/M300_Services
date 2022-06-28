@@ -55,6 +55,8 @@ In diesem Repository werden meine Aufträge und Kenntnisse vom Modul 300 dokumen
 2.Kennt die wichtigsten inhaltlichen und formalen Regeln, die bei der Dokumentation von Arbeitsergebnissen einzuhalten sind.
 
 # Zeitplan M300
+![image](https://user-images.githubusercontent.com/105722466/176194961-a8cc1e85-a7cc-4176-ba11-271ca542b1a1.png)
+
 
 # Hauptteil
 Nun kommt der Hauptteil der des Repositorys
