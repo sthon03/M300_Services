@@ -1,6 +1,8 @@
 # Einleitung
-Mithilfe von Kubernetes Wordpress als Container Deployen mit einer Mysql Datenbank, die wenn sie destroyed wird und geupt wird, wird die Webseite wieder aufgebaut. 
-
+In diesem Projekt zeigen wir, wie man eine ganze Wordpress Umgebung in Docker umsetzt/aufbaut. <br>
+Unser Ziel der Arbeit:
+- Wir wollen einen schnellen und einfachen weg um Wordpress aufzusetzen und schritte wie zB. das Installieren von XAMPP etc. vermeiden
+- Stattdessen wollen wir unter Docker ein einziges File erstellen und anhand von wenigen Commands die ganze Umgebung aufsetzten
 
 
 # Inhaltsverszeichnis
@@ -11,10 +13,9 @@ echo && cat /dev/urandom | env LC_CTYPE=C tr -dc [:alnum:] | head -c 15 | base64
 UWM4T3RXUWJlV0loSGRy
 
 ## Umsetzung
-Text
+
 
 ## Testing
-Text
 
 ## Quellen
 Links die wir für die Ideenfindung und für das umsetzen des Projektes gebraucht haben
