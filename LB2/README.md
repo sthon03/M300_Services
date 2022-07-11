@@ -84,8 +84,7 @@ $ docker-compose up -d
 # Testing
 
 # Quellen
-Links die wir für die Ideenfindung und für das umsetzen des Projektes gebraucht haben
-
+Links die wir für die Ideenfindung und für das Umsetzen des Projektes gebraucht haben:<br>
 https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/ <br>
 https://www.youtube.com/watch?v=-Hn7vFAr-9s <br>
 https://youtu.be/c5c9yVtQGbU <br>
