@@ -1,11 +1,7 @@
 # Einleitung
-Mithilfe von Kubernetes WOrdpress als Container Deployen mit einer Mysql Datenbank, die wenn sie destroyed wird und geupt wird, wird die Webseite wieder aufgebaut. 
+Mithilfe von Kubernetes Wordpress als Container Deployen mit einer Mysql Datenbank, die wenn sie destroyed wird und geupt wird, wird die Webseite wieder aufgebaut. 
 
-(https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 
-https://www.youtube.com/watch?v=-Hn7vFAr-9s
-
-https://youtu.be/c5c9yVtQGbU
 
 # Inhaltsverszeichnis
 
@@ -21,4 +17,9 @@ Text
 Text
 
 ## Quellen
-Text
+Links die wir für die Ideenfindung und für das umsetzen des Projektes gebraucht haben
+
+https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/
+https://www.youtube.com/watch?v=-Hn7vFAr-9s
+https://youtu.be/c5c9yVtQGbU
+https://www.youtube.com/watch?v=pYhLEV-sRpY
