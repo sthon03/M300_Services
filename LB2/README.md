@@ -1,10 +1,19 @@
 # Einleitung
-In diesem Projekt zeigen wir, wie man eine ganze Wordpress Umgebung in Docker umsetzt/aufbaut. <br>
+In diesem Projekt zeigen wir, wie man eine ganze Wordpress mit Mysql und PHPmyadmin Umgebung in Docker umsetzt/aufbaut. <br>
 Unser Ziel der Arbeit:
 - Wir wollen einen schnellen und einfachen weg um Wordpress aufzusetzen und schritte wie zB. das Installieren von XAMPP etc. vermeiden
 - Stattdessen wollen wir unter Docker ein einziges File erstellen und anhand von wenigen Commands die ganze Umgebung aufsetzten
+<br><br>
+![Wordpress und Docker Abbildung](/LB2/images/docker-wordpress.png)
+
+Zuerst haben wir versucht unsere Wordpress Umgebung in Kubernetes aufzusetzen, haben aber jedoch bemerkt, das dies zu anspruchsvoll ist und wir es mit unserem jetzigen Know-How nicht rechtzeitig schaffen würde aufzusetzen. Deswegen haben wir uns entschieden, den Auftrag doch mit Docker umzusetzen und in weiterer Zukunft, diesen Auftrag in Kubernetes einzurichten.
 
 # Umsetzung
+
+## Teil 1 | Umsetzung
+
+<br>
+
 Also bevor wir anfangen müssen wir Docker installiert haben. Dies kann man ganz einfach über [Docker.com](https://www.docker.com/) machen. <br>
 Als nächstes zeigen wir die verschiedenen Images, die wir brauchen werden. Diese können wir im [DockerHub](https://hub.docker.com/) finden. <br>
 - [Das offizielle WordPress Image](https://hub.docker.com/_/wordpress): Wir werden das offizielle WordPress Image brauchen. Dieses Image beinhaltet Apache, PHP...
@@ -15,7 +24,7 @@ Das Ziel wäre es also ein File zusammenzustellen, welches in der Lage ist all d
 Wenn soweit alles richtig installiert wurde können wir mit dem Erstellen des Compose Files anfangen.<br>
 
 Neues Compose File erstellen: <br>
-WICHTIG: Das Compose File muss eine .yaml Endung besitzen, damit es als YAML File erkennt wird <br>
+WICHTIG: Das Compose File muss eine .yaml Endung besitzen, damit es als YAML File erkennt wird.  <br>
 ````
 touch docker-compose.yaml
 ````
@@ -45,7 +54,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - '8080:80'
+      - '8888:80'
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: password 
@@ -79,6 +88,62 @@ Configuartion der Container herunterfahren
 ````
 $ docker-compose down -volumes
 ````
+WICHTIG: Ebenfalls sollte man aufpassen, das die angegebenen Ports nicht belegt sind, ansonsten kann man nicht auf die Wordpress oder PHPmymadmin Seite zugreifen. Deswegen haben wir für unsere PHPmyadmin Seite, den Port 8888 gegeben, weil 8080 vergeben war. 
+
+<br>
+
+## Teil 2 | Umsetzung
+<br>
+Nun müssen wir unser .yaml File auf unserem Server per FTP rübertransferieren, weil wir es sonst Lokal ausführen würden und das wollen wir nicht. 
+
+Um dies auszuführen müssen wir diesen Befehl eingeben:
+```
+sudo wget https://raw.githubusercontent.com/sthon03/M300_Services/main/docker-compose.yml
+```
+![sudo wget Befehl](/LB2/images/wget_Befehl.png)
+
+Nun müssen wir nur noch mit compose unsere Datei ausführen und die Container einrichten. 
+
+Dazu geben wir diesen Befehl ein:
+
+```
+sudo docker-compose up -d
+```
+![docker compose befehl](/LB2/images/dockerComposeUp_Befehl.png)
+
+jetzt müssen wir uns ein bisschen gedulden, bis die Container eingerichtet werden und wir auf unsere Webseite zugreifen können.
+
+Um die Container zu stoppen und entfernen, weil man Speicherplatz braucht, führt man diesen Befehl aus:
+```
+sudo docker-compose down --rmi all
+```
+![docker compose down Befehl](/LB2/images/dockerComposeDown_Befehl.png)
+
+Wir machen dies aber jetzt nicht, weil wir unsere Wordpress Seite noch fertigstellen wollen.
+
+## Teil 3 | Umsetzung
+<br>
+Nachdem wir unsere Container aufgesetzt haben versuchen wir im "Google Chrome" auf die Seite zuzugreifen, indem wir unsere IP-Adresse eingeben mit dem Port dahinter.
+
+`
+10.3.43.26:8000
+`
+<br>
+
+Es sollt euch die Wordpress Standardseite begrüssen. Falls dies der Fall ist, dann habt ihr bis jetzt alles richtig gemacht.
+
+![Wordpress Zugriff](/LB2/images/WordpressStart.png)
+
+*Anschliessend müssen wir noch ein paar Konfigurationsparameter einrichten.*
+
+![Wordpress Config](/LB2/images/WordpressConfig.png)
+
+*Die vorherigen Konfigurationsparameter braucht man nun, um sich im Wordpress einzuloggen.*
+
+![Wordpress Login](/LB2/images/WordpressLogin.png)
+
+<br>
+<br>
 
 # Testing
 
