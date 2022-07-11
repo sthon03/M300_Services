@@ -15,9 +15,16 @@ Als nächstes zeigen wir die verschiedenen Images, die wir brauchen werden. Dies
 - [MySQL Image](https://hub.docker.com/_/mysql): MySql werden wir auch als Container brauchen. In diesem Image gibt es ein paar Environment Variables wie zB. MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_USER & MYSQL_PASSWORD (Um einen neuen User zu erstellen)... . Dies sind alles Variablen welche wir in unserem Docker Compose File brauchen werden.
 - [Official phpMyAdmin Docker image](https://hub.docker.com/r/phpmyadmin/phpmyadmin): Dieses Image wird uns dazu dienen um Tabellen, Spalten etc. zu sehen.
 
-Das Ziel wäre es also ein File zusammenzustellen, welches in der Lage ist all diese Dinge für uns aufzusetzen.
+Das Ziel wäre es also ein File zusammenzustellen, welches in der Lage ist all diese Dinge für uns aufzusetzen. <br>
+Wenn soweit alles richtig installiert wurde können wir mit dem Erstellen des Compose Files anfangen.<br>
 
+Neues Compose File erstellen: <br>
+WICHTIG: Das Compose File muss eine .yaml Endung besitzen, damit es als YAML File erkennt wird <br>
+````
+touch docker-compose.yaml
+````
 
+Unser Compse File ist folgendermassen aufgebaut:
 ````
 version: '3'
 
@@ -67,6 +74,10 @@ networks:
   wpsite:
 volumes:
   db_data:
+````
+
+````
+$ docker-compose up -d
 ````
 
 
