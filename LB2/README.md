@@ -75,11 +75,14 @@ networks:
 volumes:
   db_data:
 ````
-
+Configuartion der Container in Betrieb nehmen:
 ````
 $ docker-compose up -d
 ````
-
+Configuartion der Container herunterfahren
+````
+$ docker-compose down -volumes
+````
 
 # Testing
 
