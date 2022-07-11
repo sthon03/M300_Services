@@ -19,7 +19,7 @@ Text
 ## Quellen
 Links die wir für die Ideenfindung und für das umsetzen des Projektes gebraucht haben
 
-https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/
-https://www.youtube.com/watch?v=-Hn7vFAr-9s
-https://youtu.be/c5c9yVtQGbU
-https://www.youtube.com/watch?v=pYhLEV-sRpY
+https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/ <br>
+https://www.youtube.com/watch?v=-Hn7vFAr-9s <br>
+https://youtu.be/c5c9yVtQGbU <br>
+https://www.youtube.com/watch?v=pYhLEV-sRpY <br>
