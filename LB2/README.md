@@ -7,12 +7,12 @@ Unser Ziel der Arbeit:
 
 # Inhaltsverszeichnis
 
-## Service-Aufbau 
-echo && cat /dev/urandom | env LC_CTYPE=C tr -dc [:alnum:] | head -c 15 | base64 && echo
-
-UWM4T3RXUWJlV0loSGRy
 
 ## Umsetzung
+Also bevor wir anfangen müssen wir Docker installiert haben. Dies kann man ganz einfach über Docker.com machen. <br>
+
+### Images die wir brauchen werden
+
 
 
 ## Testing
