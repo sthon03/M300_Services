@@ -11,6 +11,11 @@ Unser Ziel der Arbeit:
 # Umsetzung
 Also bevor wir anfangen müssen wir Docker installiert haben. Dies kann man ganz einfach über [Docker.com](https://www.docker.com/) machen. <br>
 Als nächstes zeigen wir die verschiedenen Images, die wir brauchen werden. Diese können wir im [DockerHub](https://hub.docker.com/) finden. <br>
+- [Das offizielle WordPress Image](https://hub.docker.com/_/wordpress): Wir werden das offizielle WordPress Image brauchen. Dieses Image beinhaltet Apache, PHP...
+- [MySQL Image](https://hub.docker.com/_/mysql): MySql werden wir auch als Container brauchen. In diesem Image gibt es ein paar Environment Variables wie zB. MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_USER & MYSQL_PASSWORD (Um einen neuen User zu erstellen)... . Dies sind alles Variablen welche wir in unserem Docker Compose File brauchen werden.
+- 
+
+
 
 
 
