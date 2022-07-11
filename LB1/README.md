@@ -1,8 +1,6 @@
 # Einleitung
 In diesem Repository werden meine Aufträge und Kenntnisse vom Modul 300 dokumentiert und erklärt. Im Modul haben wir hauptsächlich die Themen Vagrant, Docker und Kubernetes behandelt.
 
-# Inhaltsverszeichnis
-
 # Handlungskompetenzen von Modul 300
 **1.Ermittelt aus Vorgaben die erforderlichen Services und leitet nötige Anforderungen ab.**
 
