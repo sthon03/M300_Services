@@ -8,16 +8,15 @@ Unser Ziel der Arbeit:
 # Inhaltsverszeichnis
 
 
-## Umsetzung
-Also bevor wir anfangen müssen wir Docker installiert haben. Dies kann man ganz einfach über Docker.com machen. <br>
-
-### Images die wir brauchen werden
-
+# Umsetzung
+Also bevor wir anfangen müssen wir Docker installiert haben. Dies kann man ganz einfach über [Docker.com](https://www.docker.com/) machen. <br>
+Als nächstes zeigen wir die verschiedenen Images, die wir brauchen werden. Diese können wir im [DockerHub](https://hub.docker.com/) finden. <br>
 
 
-## Testing
 
-## Quellen
+# Testing
+
+# Quellen
 Links die wir für die Ideenfindung und für das umsetzen des Projektes gebraucht haben
 
 https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/ <br>
