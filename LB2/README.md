@@ -12,7 +12,108 @@ Unser Ziel der Arbeit:
 Zuerst haben wir versucht unsere Wordpress Umgebung in Kubernetes aufzusetzen, haben aber jedoch bemerkt, das dies zu anspruchsvoll ist und wir es mit unserem jetzigen Know-How nicht rechtzeitig schaffen würde aufzusetzen. Deswegen haben wir uns entschieden, den Auftrag doch mit Docker umzusetzen und in weiterer Zukunft, diesen Auftrag in Kubernetes einzurichten. Wir haben es mit diesem Video versucht umzusetzen: https://www.youtube.com/watch?v=-Hn7vFAr-9s&t=151s
 <br>
 
-Uns hat das nötige Know-How gefehlt und wir mussten kurzfristig auf Docker umsteigen, da wir diese Containervirtualisierungssoftware einigermassen verstanden haben. 
+Zuerst müssen wir eine pvc .yaml Datei für Kubernetes erstellen mit diesem Inhalt:
+
+```
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wordpress-volume
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: block-storage-class-name
+```
+Anschliessend führen wir die Datei aus mit:
+
+```
+kubectl apply -f wp-volume.yaml
+```
+Dann brauchen wir eine .yml Datei für das Wordpress Pod:
+
+````
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wordpress
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress
+  template:
+    metadata:
+      labels:
+        app: wordpress
+    spec:
+      containers:
+        - name: wordpress
+          image: wordpress:5.8.3-php7.4-apache
+          ports:
+          - containerPort: 80
+            name: wordpress
+          volumeMounts:
+            - name: wordpress-data
+              mountPath: /var/www
+          env:
+            - name: WORDPRESS_DB_HOST
+              value: mysql-service.default.svc.cluster.local
+            - name: WORDPRESS_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: wp-db-secrets
+                  key: MYSQL_ROOT_PASSWORD
+            - name: WORDPRESS_DB_USER
+              value: root
+            - name: WORDPRESS_DB_NAME
+              value: wordpress
+      volumes:
+        - name: wordpress-data
+          persistentVolumeClaim:
+            claimName: wordpress-volume
+````
+
+Ebenso führen wir auch diese Datei aus mit:
+
+````
+kubectl apply -f wp.yaml
+````
+
+Noch eine letzte .yml Konfigurationsdatei müssen wir erstellen und ausführen und dann sind wir so weit, um auf unseren Wordpress zuzugreifen:
+
+````
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: wordpress-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: wordpress
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+````
+
+Ebenso führen wir diese letzte Datei noch aus:
+
+````
+kubectl apply -f wp-service.yaml
+````
+Nun sollte man auf die Wordpress Konfigurationsseite zugreifen können, indem man die Externe-IP in den Browser eingibt, bei uns ist jedoch keine externe IP vorhanden und somit kann man nicht auf die Konfiguration zugreifen.
+
+![Kubernetes Pod](/LB2/images/KubernetesPodWordpress.png)
+
+<br>
+
+Im ganzen hat uns hat das nötige Know-How gefehlt und wir mussten kurzfristig auf Docker umsteigen, da wir diese Containervirtualisierungssoftware einigermassen verstanden haben. 
 
 ![Kubernetes und Wordpress Abbildung](/LB2/images/KubernetesWordpress.png)
 
