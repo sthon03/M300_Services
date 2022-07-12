@@ -30,7 +30,7 @@ spec:
 Anschliessend führen wir die Datei aus mit:
 
 ```
-kubectl apply -f wp-volume.yaml
+kubectl apply -f wp-volume.yml
 ```
 Dann brauchen wir eine .yml Datei für das Wordpress Pod:
 
@@ -80,7 +80,7 @@ spec:
 Ebenso führen wir auch diese Datei aus mit:
 
 ````
-kubectl apply -f wp.yaml
+kubectl apply -f wp.yml
 ````
 
 Noch eine letzte .yml Konfigurationsdatei müssen wir erstellen und ausführen und dann sind wir so weit, um auf unseren Wordpress zuzugreifen:
@@ -105,7 +105,7 @@ spec:
 Ebenso führen wir diese letzte Datei noch aus:
 
 ````
-kubectl apply -f wp-service.yaml
+kubectl apply -f wp-service.yml
 ````
 Nun sollte man auf die Wordpress Konfigurationsseite zugreifen können, indem man die Externe-IP in den Browser eingibt, bei uns ist jedoch keine externe IP vorhanden und somit kann man nicht auf die Konfiguration zugreifen.
 
