@@ -142,14 +142,40 @@ Es sollt euch die Wordpress Standardseite begrüssen. Falls dies der Fall ist, d
 
 ![Wordpress Login](/LB2/images/WordpressLogin.png)
 
+*Nun sollte man auf diese Startseite landen. Falls dies der Fall ist, dann hat man alles richtig konfiguriert.*
+
+![Wordpress Startseite](/LB2/images/StartseiteWordpress.png)
+
+Wir versuchen nun mit der IP und mit dem Port:
+
+`
+10.3.43.26:8888
+`
+
+die PHPmyadmin Seite zu öffnen und unsere Datenbanken anzuschauen. 
+
+![PHPmyadmin Webseite](/LB2/images/PHPmyadminDatenbank.png)
+
 <br>
 <br>
 
 # Testing
 
+Unten sind unsere Testcases in Tabellenform beschrieben. 
+
+![TestCases](/LB2/images/TestCases1.png)
+
+
+
+![TestCases2](/LB2/images/TestCases2.png)
+
 # Quellen
-Links die wir für die Ideenfindung und für das Umsetzen des Projektes gebraucht haben:<br>
+Links die wir für die Ideenfindung und für das Umsetzen des Projektes gebraucht haben:
+
+<br>
+
 https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/ <br>
 https://www.youtube.com/watch?v=-Hn7vFAr-9s <br>
 https://youtu.be/c5c9yVtQGbU <br>
 https://www.youtube.com/watch?v=pYhLEV-sRpY <br>
+https://youtu.be/pYhLEV-sRpY <br>
