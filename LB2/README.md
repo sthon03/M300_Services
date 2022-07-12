@@ -10,6 +10,9 @@ Unser Ziel der Arbeit:
 <br><br>
 
 Zuerst haben wir versucht unsere Wordpress Umgebung in Kubernetes aufzusetzen, haben aber jedoch bemerkt, das dies zu anspruchsvoll ist und wir es mit unserem jetzigen Know-How nicht rechtzeitig schaffen würde aufzusetzen. Deswegen haben wir uns entschieden, den Auftrag doch mit Docker umzusetzen und in weiterer Zukunft, diesen Auftrag in Kubernetes einzurichten. Wir haben es mit diesem Video versucht umzusetzen: https://www.youtube.com/watch?v=-Hn7vFAr-9s&t=151s
+<br>
+
+Uns hat das nötige Know-How gefehlt und wir mussten kurzfristig auf Docker umsteigen, da wir diese Containervirtualisierungssoftware einigermassen verstanden haben. 
 
 ![Kubernetes und Wordpress Abbildung](/LB2/images/KubernetesWordpress.png)
 
