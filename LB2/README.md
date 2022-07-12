@@ -4,9 +4,14 @@ Unser Ziel der Arbeit:
 - Wir wollen einen schnellen und einfachen weg um Wordpress aufzusetzen und schritte wie zB. das Installieren von XAMPP etc. vermeiden
 - Stattdessen wollen wir unter Docker ein einziges File erstellen und anhand von wenigen Commands die ganze Umgebung aufsetzten
 <br><br>
+
 ![Wordpress und Docker Abbildung](/LB2/images/docker-wordpress.png)
 
-Zuerst haben wir versucht unsere Wordpress Umgebung in Kubernetes aufzusetzen, haben aber jedoch bemerkt, das dies zu anspruchsvoll ist und wir es mit unserem jetzigen Know-How nicht rechtzeitig schaffen würde aufzusetzen. Deswegen haben wir uns entschieden, den Auftrag doch mit Docker umzusetzen und in weiterer Zukunft, diesen Auftrag in Kubernetes einzurichten.
+<br><br>
+
+Zuerst haben wir versucht unsere Wordpress Umgebung in Kubernetes aufzusetzen, haben aber jedoch bemerkt, das dies zu anspruchsvoll ist und wir es mit unserem jetzigen Know-How nicht rechtzeitig schaffen würde aufzusetzen. Deswegen haben wir uns entschieden, den Auftrag doch mit Docker umzusetzen und in weiterer Zukunft, diesen Auftrag in Kubernetes einzurichten. Wir haben es mit diesem Video versucht umzusetzen: https://www.youtube.com/watch?v=-Hn7vFAr-9s&t=151s
+
+![Kubernetes und Wordpress Abbildung](/LB2/images/KubernetesWordpress.png)
 
 # Umsetzung
 
